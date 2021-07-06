@@ -8,8 +8,18 @@
     </Style>
     <Style x:Key="WindowBorderStyle" BasedOn="{StaticResource BaseWindowBorderStyle}" TargetType="{x:Type Border}">
         <Setter Property="Background" Value="#282a36"></Setter>
+        <Setter Property="CornerRadius" Value="10"/>
+        <Setter Property="Margin" Value="20"/>
+        <Setter Property="Window.Effect">
+            <Setter.Value>
+                <DropShadowEffect Color="Black"
+                                  ShadowDepth="0"
+                                  BlurRadius="20"/>
+            </Setter.Value>
+        </Setter>
     </Style>
     <Style x:Key="WindowStyle" TargetType="{x:Type Window}" BasedOn="{StaticResource BaseWindowStyle}" >
+        <Setter Property="Background" Value="Transparent"/>
     </Style>
     <Style x:Key="PendingLineStyle" BasedOn="{StaticResource BasePendingLineStyle}" TargetType="{x:Type Line}" ></Style>
     <Style x:Key="ItemTitleStyle" BasedOn="{StaticResource BaseItemTitleStyle}" TargetType="{x:Type TextBlock}" >
